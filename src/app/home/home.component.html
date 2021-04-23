@@ -1,0 +1,17 @@
+
+<div class="parent text-center p-4">
+    <h1 class="p-4">Welcome to my application</h1>
+    <p>
+        please clink on <button class="btn btn-success" (click) = "increaseCounter()">THIS</button> to count up 
+        or click <button class="btn btn-danger" (click)="decreaseCounter()" >THIS</button> to count down
+    </p>
+    <div class="counter">
+        <h1>
+            {{ counter }}
+        </h1>
+    </div>
+
+    <input type="text" class="form-control my-5" [(ngModel)] = 'input' placeholder="type anything here to capitalize the first letter ... " >
+    <h1 class="text-center text-capitalize p-5">{{ input }}</h1>
+
+</div>
