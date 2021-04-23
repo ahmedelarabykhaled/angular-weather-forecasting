@@ -17,6 +17,7 @@ export class BlogComponent implements OnInit {
   Weather : any;
 
   BreakingNews : any;
+  // currentComponent : any = window.location.pathname;
 
   constructor(private _GetWeatherService : GetWeatherService , private _GetBreakingNews : GetBreakingNewsService) {
     // this.Tempreture = _GetWeatherService.getTempreture();
