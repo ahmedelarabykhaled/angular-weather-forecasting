@@ -1,8 +1,31 @@
-<div class="text-center">
+<!-- <div class="text-center"> -->
     <!-- {{ Tempreture }} -->
     <!-- <h1 *ngFor="let item of Tempreture; index as i" >{{ Tempreture[i].title }}</h1> -->
-    <button class="btn btn-success" (click)="getTempreture()" >predict tempreture</button>
+    <!-- <button class="btn btn-success" (click)="getTempreture()" >predict tempreture</button>
     <h1 class="text-capitalize">the tempreture is : {{ Tempreture }} </h1>
     <button class="btn btn-success" (click)="getWeather()" >predict weather</button>
     <h1 class="text-capitalize">the Weather is : {{ Weather }} </h1>
+</div> -->
+
+<div class="container">
+    <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>News</span>
+    </div>
+</div>
+
+
+<div class="fullwidth-block">
+    <div class="container">
+        <div class="row">
+            <div class="content col-md-8">
+                <div class="post" *ngFor="let item of BreakingNews.articles; index as i;" >
+                    <h2 class="entry-title">{{ item.title }}</h2>
+                    <div class="featured-image"><img src="{{ item.urlToImage }}" alt=""></div>
+                    <p>{{ item.description }}</p>
+                    <a href="{{ item.url }}" target="_blank" class="button">Read more</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

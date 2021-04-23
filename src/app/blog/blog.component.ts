@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { from } from 'rxjs';
 import { GetWeatherService } from '../get-weather.service';
-import { HttpClient } from '@angular/common/http';
+import { GetBreakingNewsService } from '../get-breaking-news.service';
 
 @Component({
   selector: 'app-blog',
@@ -17,12 +16,16 @@ export class BlogComponent implements OnInit {
   Summery : any;
   Weather : any;
 
-  constructor(private _GetWeatherService : GetWeatherService ) {
+  BreakingNews : any;
+
+  constructor(private _GetWeatherService : GetWeatherService , private _GetBreakingNews : GetBreakingNewsService) {
     // this.Tempreture = _GetWeatherService.getTempreture();
   }
 
   ngOnInit( ): void {
-
+    this._GetBreakingNews.getAllNews().subscribe(data => {
+      this.BreakingNews = data
+    })
   }
 
   getTempreture(): void{

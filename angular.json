@@ -31,9 +31,16 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/fonts/font-awesome.min.css",
+              "src/assets/style.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery-1.11.1.min.js",
+              "src/assets/js/plugins.js",
+              "src/assets/js/app.js",
+              "src/assets/js/maps.js"
+            ]
           },
           "configurations": {
             "production": {

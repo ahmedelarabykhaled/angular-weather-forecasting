@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GetBreakingNewsService } from '../get-breaking-news.service';
 
 @Component({
   selector: 'app-home',
@@ -7,19 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  breakingNews : any = 0;
 
-  counter = 0;
-  input = '';
+  constructor(private _GetBreakingNews : GetBreakingNewsService) { }
 
   ngOnInit(): void {
+    this._GetBreakingNews.getBreakingNews().subscribe(data => {
+      this.breakingNews = data
+    })
   }
 
-increaseCounter() {
-  this.counter++;
-}
-decreaseCounter(){
-  this.counter--;
-}
+  getBreakingNews()
+  {
+    // this._GetBreakingNews.getBreakingNews().subscribe(data => {
+    //   this.breakingNews = data
+    // })
+  }
 
 }
