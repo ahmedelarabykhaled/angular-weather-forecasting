@@ -132,7 +132,9 @@
               alt=""
               srcset=""
             />
-            <h3>{{ item.title }}</h3>
+            <h3>
+              <a href="{{ item.url }}" target="_blank" style="color: #fff;text-decoration: underline;">{{ item.title }}</a>
+            </h3>
             <p>{{ item.description }}</p>
           </li>
         </ul>
