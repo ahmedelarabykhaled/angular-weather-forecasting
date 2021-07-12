@@ -61,7 +61,7 @@
               <td>{{ getHour( i) }}:00</td>
               <td>{{ predictedWeatherDetails[0][i].toFixed(3) }}</td>
               <td>{{ predictedWeatherDetails[1][i].toFixed(3) }}</td>
-              <td>{{ predictedWeatherDetails[2][i] == null ? "partly cloud" : predictedWeatherDetails[2][i] }}</td>
+              <td>{{ predictedWeatherDetails[2][i] == null ? "0" : predictedWeatherDetails[2][i] }}</td>
               <td>{{ predictedWeatherDetails[3][i].toFixed(3) }}</td>
             </tr>
           </tbody>
