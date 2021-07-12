@@ -57,13 +57,12 @@
             <!-- {{ predictedWeatherDetails[0][0]}} -->
             <tr *ngFor="let weather of predictedWeatherDetails[0];index as i" style="border-bottom: 1px #999 solid;" >
               <!-- <td>{{ getDate('fdsa',i%6==0?1:0) }}</td> -->
-              <td> {{ getDate('Sat Sept 10 2006', i%6==0?1:0) | date }} </td>
-              <td>{{ getHour(4 * i) }}:00</td>
+              <td> {{ getDate('Sat Sept 10 2006', i%24==0?1:0) | date }} </td>
+              <td>{{ getHour( i) }}:00</td>
               <td>{{ predictedWeatherDetails[0][i].toFixed(3) }}</td>
               <td>{{ predictedWeatherDetails[1][i].toFixed(3) }}</td>
-              <td>{{ predictedWeatherDetails[2][i] == null ? 0 : predictedWeatherDetails[2][i] }}</td>
+              <td>{{ predictedWeatherDetails[2][i] == null ? "partly cloud" : predictedWeatherDetails[2][i] }}</td>
               <td>{{ predictedWeatherDetails[3][i].toFixed(3) }}</td>
-              <!-- <td>{{i }}</td> -->
             </tr>
           </tbody>
         </table>
